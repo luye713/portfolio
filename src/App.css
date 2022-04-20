@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+
+:root {
+    /* Colors */
+    --black: rgb(65, 15, 30);
+    --grey: rgb(252, 246, 237);
+    --neutral-grey: rgb(215 208 198);
+    --dark-grey: rgb(121, 90, 101);
+    --white: rgb(255,255,248);
+    --orange: #ee7752;
+
+    /* Container */
+    --container: 50rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    scroll-behavior: smooth;
+    color: var(--black);
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+    font-size: 3rem;
+    letter-spacing: -1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+    font-size: 2.44rem;
+}
+
+h3 {
+    font-size: 1.56rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+p {
+    max-width: 35rem;
+    margin-top: 0;
+}
+
+b {
+    font-weight: 500;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background-color: rgb(255, 255, 248);
+    margin: 0;
+}
+
+.main-content {
+    max-width: var(--container);
+    margin: auto;
+    padding: 0 1rem 0;
+}
+
+/* Button */
+
+.button {
+    text-decoration: none;
+    font-size: .9rem;
+    line-height: 1.8;
+    text-transform: uppercase;
+    display: block;
+    width: fit-content;
+    padding: .4rem 1.75rem;
+    color: var(--white);
+    background: linear-gradient(45deg, #ee7752, #e73c7e, #dd3400);
+    background-size: 400% 400%;
+    border-radius: 4px 12px 4px 12px;
+    transition: all .2s ease;
+}
+
+.button:hover {
+    border-radius: 12px;
+    /* background: linear-gradient(140deg, var(--orange), 80%, var(--black)); */
+    transition: all .2s ease;
+    background-size: 400% 400%;
+    animation: gradient 1s forwards;
+}
+
+.button-2 {
+    background: linear-gradient(45deg, #065291, #3c5be7, #1178b4);
+}
+
+
+/* Section */
+
+.section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--neutral-grey);
 }
